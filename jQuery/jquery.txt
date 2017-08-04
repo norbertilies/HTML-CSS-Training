@@ -1,0 +1,60 @@
+// $('.purpleToFuchsia').click(function(){
+//   $('.purple').css('background-color','fuchsia')});
+
+// $('.toggleGreenGrey').click(function(){
+//   $('.green').toggleClass('grey')});
+
+// $('.switchBoxes').click(function(){   
+//   $('.red').toggleClass('blue');
+//   $('.blue').toggleClass('red');
+//   $('.red').toggleClass('blue');
+//  });
+
+// $('.insertText').click(function(){
+//   $('.purple').append('<p class="white">Lorem Ipsum something something</p>')
+// });
+
+
+// var first = null;
+// var second = null;
+// $('.colors').children().click(function(){
+  
+//   second = (second===null&&first!=null)?$(this):second;
+//   first = (first===null)?$(this):first;
+//   if (first!=null & second!=null){
+//       var firstClass = first.attr('class');
+//       var secondClass = second.attr('class');
+//       first.removeClass(firstClass).
+//           addClass(secondClass);
+//       second.removeClass(secondClass).
+//           addClass(firstClass);
+//       first = null;
+//       second = null;
+//   }
+// })
+
+$(window).resize(function(){
+  $('.colors div').css('height','auto');
+  var max = 0;
+  $('.colors div').each(function(){
+      
+     if ($(this).height()>max)
+       max = $(this).height();
+     }     
+  );
+  $('.colors div').css('height',max);
+  max = 0;
+ });
+
+$(window).resize(function(){
+  if($(window).width() < 800)
+{    
+  $('.colors div').css('display','block');
+  $('.colors div').css('width','100%')
+}
+  else{
+    $('.colors div').css('display','inline-block');
+    $('.colors div').css('width','20%')
+  }
+                           }
+                 )
